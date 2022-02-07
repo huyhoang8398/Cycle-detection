@@ -1,0 +1,18 @@
+For compiling the program:
+$ gcc detect.c mylibs/md5.c mylibs/floyd.c mylibs/mybrent.c mylibs/mystack.c -lm
+
+For running:
+$ ./a.out $arg1 $arg2 $arg3 $arg4
+
+where:
+    $arg1 = 1 if you want to see the running real time
+            0 if you don't 
+    
+    $arg2 = 1 if you want to calculate the value of mu, this would take a quite long time
+            0 if you don't 
+    
+    $arg3 is the minimum input/output length of hash function (in bytes)
+    $arg4 is the maximum input/output length of hash function (in bytes)
+
+For example, if you want to compare the running real time, want to calculate mu for the random data between 5 bytes and 6 bytes, run:
+$ ./a.out 1 1 5 6
